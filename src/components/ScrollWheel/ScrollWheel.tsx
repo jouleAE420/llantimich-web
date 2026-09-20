@@ -58,7 +58,7 @@ export function ScrollWheel() {
                 frame = window.requestAnimationFrame(update);
             }
         };
-
+        //FIX DE WHEEL
         const observer = new ResizeObserver(scheduleUpdate);
         observer.observe(track);
 
