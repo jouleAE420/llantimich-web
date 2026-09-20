@@ -1,0 +1,246 @@
+.landing {
+    position: relative;
+    isolation: isolate;
+    background: #100d08;
+}
+
+/* Fotografía de fondo */
+.landing::before {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-image: url("/images/portada.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70% center;
+    content: "";
+}
+
+/* Oscurece el área del texto y funde el final con la página */
+.landing::after {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(
+            to bottom,
+            rgb(16 13 8 / 50%) 0%,
+            transparent 25%,
+            transparent 65%,
+            #100d08 100%
+        ),
+        linear-gradient(
+            to right,
+            rgb(16 13 8 / 98%) 0%,
+            rgb(16 13 8 / 94%) 28%,
+            rgb(16 13 8 / 78%) 48%,
+            rgb(16 13 8 / 35%) 72%,
+            rgb(16 13 8 / 25%) 100%
+        );
+    content: "";
+}
+
+.landing-shell {
+    width: min(1120px, calc(100% - var(--wheel-rail, 112px) - 40px));
+    margin-left: max(20px, calc((100% - var(--wheel-rail, 112px) - 1120px) / 2));
+    margin-right: auto;
+}
+
+/* Encabezado integrado */
+.landing-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-block: 16px;
+    border-bottom: 1px solid #ffffff25;
+}
+
+.landing-brand {
+    display: inline-flex;
+    flex-shrink: 0;
+}
+
+.landing-brand img {
+    display: block;
+    width: 260px;
+    height: 70px;
+    object-fit: cover;
+    object-position: center;
+    mix-blend-mode: lighten;
+}
+
+.landing-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.landing-header nav a {
+    padding-block: 12px;
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: 0 2px 8px #000;
+}
+
+.landing-header nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: #ff3046;
+    text-underline-offset: 8px;
+}
+
+/* Contenido de la portada */
+.landing-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+    align-items: start;
+    gap: 32px;
+    padding-top: 32px;
+    padding-bottom: 100px;
+}
+
+.landing-content {
+    min-width: 0;
+}
+
+.landing-content h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(2.6rem, 5.1vw, 4.6rem);
+    font-style: italic;
+    font-weight: 900;
+    line-height: 1.06;
+    letter-spacing: -0.045em;
+    text-transform: uppercase;
+    text-shadow: 0 3px 20px rgb(0 0 0 / 25%);
+}
+
+.landing-content h1 span {
+    color: #ff3046;
+}
+
+.landing-description {
+    max-width: 490px;
+    margin: 26px 0 30px;
+    color: #e0dfdc;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.landing .button-secondary {
+    background: rgb(16 13 8 / 50%);
+    border-color: #ffffff70;
+}
+
+.landing .button-secondary:hover {
+    background: rgb(16 13 8 / 80%);
+}
+
+.landing .hero-caption {
+    color: #d0cdca;
+}
+
+/* Referencia geométrica para el recorrido de la llanta */
+.landing-wheel-zone {
+    align-self: start;
+    min-width: 0;
+}
+
+.landing-wheel-boundary {
+    width: 100%;
+    height: 1px;
+    pointer-events: none;
+}
+
+@media (max-width: 800px) {
+    .landing::before {
+        background-position: 65% center;
+    }
+
+    .landing::after {
+        background:
+            linear-gradient(to bottom, rgb(16 13 8 / 65%), rgb(16 13 8 / 80%) 60%, #100d08 100%),
+            linear-gradient(to right, rgb(16 13 8 / 65%), rgb(16 13 8 / 15%));
+    }
+
+    .landing-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        padding-top: 24px;
+        padding-bottom: 32px;
+    }
+
+    .landing-content h1 {
+        font-size: clamp(2rem, 7vw, 3.8rem);
+    }
+
+    .landing-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .landing-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding-block: 12px;
+    }
+
+    .landing-brand img {
+        width: 190px;
+        height: 52px;
+    }
+
+    .landing-header nav {
+        gap: 20px;
+        font-size: 0.9rem;
+    }
+
+    .landing .eyebrow {
+        font-size: 0.65rem;
+        line-height: 1.6;
+        letter-spacing: 0.07em;
+    }
+}
+
+.button-whatsapp {
+    gap: 10px;
+}
+
+.whatsapp-icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.landing .hero-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 16px;
+    width: 100%;
+    max-width: 560px;
+}
+
+.landing .hero-actions .button {
+    width: 100%;
+    min-height: 54px;
+    padding: 14px 16px;
+    gap: 10px;
+    line-height: 1.3;
+}
+
+.landing .whatsapp-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+    .landing .hero-actions {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+    }
+}
