@@ -244,3 +244,7 @@
         grid-auto-rows: 1fr;
     }
 }
+
+.landing-shell {
+    padding-top: var(--site-header-height);
+}

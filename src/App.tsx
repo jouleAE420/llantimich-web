@@ -1,45 +1,21 @@
 import { business } from "./config/business";
-import { HeroSection } from "./sections/HeroSection";
-import { ScrollWheel } from "./components/ScrollWheel";
-import { ServicesSection } from "./sections/ServicesSection";
+import { SiteHeader } from "./components/SiteHeader/SiteHeader";
+import { HeroSection } from "./sections/Hero/HeroSection";
+import { ScrollWheel } from "./components/ScrollWheel/ScrollWheel";
+import { VisitSection } from "./sections/Visit/VisitSection";
+import { ServicesSection } from "./sections/Services/ServicesSection";
 import "./App.css";
 
 function App() {
     return (
         <>
+            <SiteHeader />
             <main>
                 <HeroSection />
                 <ScrollWheel />
                 <ServicesSection />
 
-                <section id="contacto" className="section contact">
-                    <h2>Visítanos en {business.city}</h2>
-
-                    <p>Consulta nuestra ubicación y conoce más del negocio.</p>
-
-                    <div className="contact-links">
-                        <a
-                            className="button"
-                            href={business.links.maps}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Cómo llegar
-                        </a>
-
-                        <a
-                            href={business.links.instagram}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Instagram
-                        </a>
-
-                        <a href={business.links.facebook} target="_blank" rel="noopener noreferrer">
-                            Facebook
-                        </a>
-                    </div>
-                </section>
+                <VisitSection />
             </main>
 
             <footer className="footer">

@@ -1,0 +1,386 @@
+.visit-section {
+    padding-top: 56px;
+    padding-bottom: 72px;
+    border-top: 1px solid #ffffff18;
+}
+
+.visit-heading {
+    max-width: 670px;
+    margin-bottom: 32px;
+}
+
+.visit-kicker {
+    margin: 0 0 12px;
+    color: #ff3046;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.visit-heading h2 {
+    margin-bottom: 14px;
+}
+
+.visit-heading h2 span {
+    color: #ff3046;
+}
+
+.visit-heading > p:last-child {
+    max-width: 560px;
+    margin: 0;
+}
+
+.visit-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+}
+
+.local-photo,
+.visit-map-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #ffffff20;
+    border-radius: 14px;
+    background: #191919;
+}
+
+.local-photo {
+    position: relative;
+    min-height: 380px;
+    margin: 0;
+}
+
+.local-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    object-fit: cover;
+    transition: transform 400ms ease;
+}
+
+.local-photo::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgb(16 13 8 / 88%), transparent 52%);
+    content: "";
+    pointer-events: none;
+}
+
+.local-photo figcaption {
+    position: absolute;
+    right: 24px;
+    bottom: 22px;
+    left: 24px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.local-photo figcaption svg {
+    width: 20px;
+    height: 20px;
+    color: #ff3046;
+    flex-shrink: 0;
+}
+
+.map-frame {
+    height: 310px;
+    overflow: hidden;
+    background: #141414;
+}
+
+.map-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: grayscale(0.65) contrast(1.05) brightness(0.82);
+}
+
+.visit-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px;
+}
+
+.visit-map-button {
+    gap: 10px;
+}
+
+.visit-map-button svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    color: #d6d4d2;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition:
+        color 180ms ease,
+        border-color 180ms ease,
+        background-color 180ms ease;
+}
+
+.social-links a:hover {
+    border-color: #ffffff2e;
+    background: #ffffff0a;
+    color: #ffffff;
+}
+
+.social-links svg {
+    width: 21px;
+    height: 21px;
+    color: #ff3046;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .local-photo:hover img {
+        transform: scale(1.035);
+    }
+}
+
+@media (max-width: 800px) {
+    .visit-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .visit-section {
+        padding-top: 44px;
+        padding-bottom: 48px;
+    }
+
+    .local-photo,
+    .local-photo img {
+        min-height: 300px;
+    }
+
+    .map-frame {
+        height: 260px;
+    }
+
+    .visit-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .visit-map-button {
+        width: 100%;
+    }
+
+    .social-links {
+        justify-content: space-between;
+    }
+
+    .social-links a {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
+.visit-map-card .visit-actions {
+    justify-content: flex-start;
+}
+
+.visit-social-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 24px;
+    padding: 26px 30px;
+    border: 1px solid #df102760;
+    border-radius: 14px;
+    background: linear-gradient(110deg, rgb(223 16 39 / 22%), transparent 52%), #191919;
+}
+
+.social-kicker {
+    margin: 0 0 8px;
+    color: #ff3046;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.visit-social-panel h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.visit-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.visit-social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 150px;
+    min-height: 50px;
+    padding: 12px 18px;
+    border: 1px solid #ffffff30;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: 800;
+    transition:
+        transform 180ms ease,
+        background-color 180ms ease,
+        border-color 180ms ease;
+}
+
+.visit-social-links a:hover {
+    border-color: #ff3046;
+    background: #df102720;
+    transform: translateY(-2px);
+}
+
+.visit-social-links svg {
+    width: 22px;
+    height: 22px;
+    color: #ff3046;
+}
+
+@media (max-width: 700px) {
+    .visit-social-panel {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 24px;
+    }
+
+    .visit-social-links {
+        width: 100%;
+    }
+
+    .visit-social-links a {
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+/* Versión compacta de ubicación */
+
+.visit-section {
+    padding-top: 44px;
+    padding-bottom: 48px;
+}
+
+.visit-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 18px;
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+.local-photo,
+.visit-map-card {
+    align-self: start;
+}
+
+.local-photo {
+    min-height: 0;
+    height: 260px;
+    border-radius: 10px;
+}
+
+.local-photo img {
+    min-height: 0;
+    height: 100%;
+    object-position: center 42%;
+}
+
+.local-photo figcaption {
+    right: 18px;
+    bottom: 16px;
+    left: 18px;
+    font-size: 0.8rem;
+}
+
+.map-frame {
+    height: 190px;
+}
+
+.visit-actions {
+    min-height: 70px;
+    padding: 12px 16px;
+}
+
+.visit-map-button {
+    min-height: 46px;
+    padding: 12px 16px;
+}
+
+.visit-social-panel {
+    max-width: 1000px;
+    margin: 18px auto 0;
+    padding: 20px 24px;
+}
+
+@media (max-width: 800px) {
+    .visit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .local-photo {
+        height: 240px;
+    }
+
+    .map-frame {
+        height: 190px;
+    }
+}
+
+@media (max-width: 560px) {
+    .local-photo {
+        height: 210px;
+    }
+
+    .map-frame {
+        height: 170px;
+    }
+
+    .visit-social-panel {
+        margin-top: 16px;
+    }
+}
+
+.visit-grid {
+    max-width: none;
+    margin-inline: 0;
+}
+
+.visit-social-panel {
+    max-width: none;
+    margin-right: 0;
+    margin-left: 0;
+}

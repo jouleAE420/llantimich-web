@@ -39,5 +39,5 @@ p {
 }
 
 section {
-    scroll-margin-top: 24px;
+    scroll-margin-top: calc(var(--site-header-height) + 18px);
 }

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import type { CSSProperties } from "react";
-import { business } from "../config/business";
+import { business } from "../../config/business";
 import "./ServicesSection.css";
 
 function ServiceIcon({ id }: { id: string }) {

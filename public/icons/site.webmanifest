@@ -1,0 +1,15 @@
+{
+    "name": "Llantimich",
+    "short_name": "Llantimich",
+    "icons": [
+        {
+            "src": "/icons/llantimich-icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "theme_color": "#100d08",
+    "background_color": "#100d08",
+    "display": "standalone"
+}

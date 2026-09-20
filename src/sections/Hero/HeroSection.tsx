@@ -1,4 +1,4 @@
-import { business } from "../config/business";
+import { business } from "../../config/business";
 import "./HeroSection.css";
 
 export function HeroSection() {
@@ -9,21 +9,6 @@ export function HeroSection() {
     return (
         <section id="inicio" className="landing" aria-labelledby="landing-title">
             <div className="landing-shell">
-                <header className="landing-header">
-                    <a
-                        className="landing-brand"
-                        href="#inicio"
-                        aria-label={`${business.name} — Inicio`}
-                    >
-                        <img src="/images/logo.webp" alt={business.name} width="260" height="70" />
-                    </a>
-
-                    <nav aria-label="Navegación principal">
-                        <a href="#servicios">Servicios</a>
-                        <a href="#contacto">Contacto</a>
-                    </nav>
-                </header>
-
                 <div className="landing-layout">
                     <div className="landing-content">
                         <p className="eyebrow">
