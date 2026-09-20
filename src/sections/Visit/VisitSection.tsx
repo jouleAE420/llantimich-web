@@ -92,8 +92,13 @@ export function VisitSection() {
                             rel="noopener noreferrer"
                         >
                             <LocationIcon />
-                            <span>Cómo llegar</span>
+                            Cómo llegar
                         </a>
+
+                        <div className="visit-address">
+                            <LocationIcon />
+                            <span>{business.address}</span>
+                        </div>
                     </div>
                 </div>
             </div>

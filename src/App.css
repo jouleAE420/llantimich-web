@@ -288,15 +288,7 @@
     --wheel-rail: 112px;
 }
 
-/* Contenido centrado dentro del área libre del carril */
-.header,
-.hero,
-.section,
-.footer {
-    width: min(1120px, calc(100% - var(--wheel-rail) - 40px));
-    margin-left: max(20px, calc((100% - var(--wheel-rail) - 1120px) / 2));
-    margin-right: auto;
-}
+
 
 /* Menos espacio debajo del encabezado */
 .hero {

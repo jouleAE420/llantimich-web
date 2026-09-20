@@ -6,7 +6,7 @@ export const business = {
         "Venta de llantas, alineación y balanceo en Morelia. Consulta opciones para tu vehículo.",
 
     whatsapp: "524431745800",
-    address: "",
+    address: "Av. Nueva Tepeyac #47 y #57, Hospitales de Don Vasco, Morelia, Michoacán",
     hours: "",
 
     links: {

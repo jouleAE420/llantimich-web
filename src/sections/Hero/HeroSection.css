@@ -41,9 +41,8 @@
 }
 
 .landing-shell {
-    width: min(1120px, calc(100% - var(--wheel-rail, 112px) - 40px));
-    margin-left: max(20px, calc((100% - var(--wheel-rail, 112px) - 1120px) / 2));
-    margin-right: auto;
+    margin-inline: auto;
+    width: min(1120px, calc(100% - 40px));
 }
 
 /* Encabezado integrado */
