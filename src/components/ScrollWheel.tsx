@@ -84,7 +84,7 @@ export function ScrollWheel() {
         <div className="wheel-divider" ref={sectionRef} aria-hidden="true">
             <div className="wheel-divider-track" ref={trackRef}>
                 <div className="wheel-divider-tire" ref={wheelRef}>
-                    <img ref={imageRef} src="/images/wheel.png" alt="" draggable={false} />
+                    <img ref={imageRef} src="/images/wheel.webp" alt="" draggable={false} />
                 </div>
             </div>
         </div>

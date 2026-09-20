@@ -44,8 +44,8 @@
     }
 
     .wheel-divider-tire {
-        width: 48px;
-        height: 48px;
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -59,4 +59,11 @@
     .wheel-divider-track {
         width: 100%;
     }
+}
+
+.wheel-divider-tire,
+.wheel-divider-tire img {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }

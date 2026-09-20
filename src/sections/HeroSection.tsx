@@ -15,7 +15,7 @@ export function HeroSection() {
                         href="#inicio"
                         aria-label={`${business.name} — Inicio`}
                     >
-                        <img src="/images/logo.png" alt={business.name} width="260" height="70" />
+                        <img src="/images/logo.webp" alt={business.name} width="260" height="70" />
                     </a>
 
                     <nav aria-label="Navegación principal">
