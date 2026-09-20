@@ -314,7 +314,7 @@
 
 @media (max-width: 800px) {
     :root {
-        --wheel-size: 44px;
+        --wheel-size: 36px;
         --wheel-rail: 64px;
     }
 

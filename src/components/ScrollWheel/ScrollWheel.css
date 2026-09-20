@@ -67,3 +67,36 @@
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 }
+.route-wheel {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    contain: layout paint style;
+}
+
+@media (max-width: 800px) {
+    .route-wheel img {
+        filter: none;
+    }
+
+    .route-wheel {
+        will-change: transform;
+    }
+}
+
+.route-wheel {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    contain: layout paint style;
+}
+
+@media (max-width: 800px) {
+    .route-wheel img {
+        filter: none;
+    }
+
+    .route-wheel {
+        will-change: transform;
+    }
+}

@@ -61,7 +61,6 @@ export function ScrollWheel() {
 
         const observer = new ResizeObserver(scheduleUpdate);
         observer.observe(track);
-        observer.observe(document.documentElement);
 
         window.addEventListener("scroll", scheduleUpdate, {
             passive: true,
